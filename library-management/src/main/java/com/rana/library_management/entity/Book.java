@@ -15,4 +15,6 @@ public class Book {
     private Integer isbn;
     private Integer quantity;
     private boolean isAvailable;
+
+
 }

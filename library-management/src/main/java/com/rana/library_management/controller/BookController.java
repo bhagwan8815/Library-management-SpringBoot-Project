@@ -31,8 +31,8 @@ public class BookController {
     // addBook. deleteBook and updateBook routes onnly access by the admin
     @PostMapping("/addbook")
     @PreAuthorize("hasRole('ADMIN')")   //it means if the user has role admin then it can access this routes
-    public ResponseEntity<Book> addBook(@RequestBody BookDTO bookDTO, @PathVariable Long id){
-       return ResponseEntity.ok(bookServices.addBook(bookDTO, id));
+    public ResponseEntity<Book> addBook(@RequestBody BookDTO bookDTO){
+       return ResponseEntity.ok(bookServices.addBook(bookDTO));
     }
 
     @PutMapping("/updatebook/{id}")
@@ -43,8 +43,8 @@ public class BookController {
 
    @DeleteMapping("/deletebook/{id}")
    @PreAuthorize("hasRole('ADMIN')")
-   public ResponseEntity<Void> deleteBook(@PathVariable Long id){
-    ResponseEntity.ok( bookServices.deleteBookById(id));
+   public ResponseEntity<?> deleteBook(@PathVariable Long id){
+        bookServices.deleteBookById(id);
     return ResponseEntity.ok().build();
     }
 }
