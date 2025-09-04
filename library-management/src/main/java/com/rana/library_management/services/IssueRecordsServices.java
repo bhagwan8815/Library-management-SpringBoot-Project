@@ -28,7 +28,7 @@ public class IssueRecordsServices {
     public IssueRecord issueTheBook(Long bookId){
      Book book = bookRepository.findById(bookId).orElseThrow(()->new RuntimeException("Book Not Found"));
      //check the quantity is avalible or not
-        if(book.getQuantity() <=0 || !book.getIsAvailable()){
+        if(book.getQuantity() <=0 || !book.isAvailable()){
             throw new RuntimeException("Book is not Available");
         }
 
@@ -50,8 +50,33 @@ public class IssueRecordsServices {
         book.setQuantity(book.getQuantity()-1);
 
         if(book.getQuantity()==0){
-            book.setIsAvailable(false);
+            book.setAvailable(false);
         }
+        bookRepository.save(book);
+      return  issueRecordsRepository.save(issueRecord);
+
+
+
+    }
+
+
+
+    public IssueRecord returnThebook(Long issueRecordId){
+        IssueRecord issueRecord = issueRecordsRepository.findById(issueRecordId).orElseThrow(()->new RuntimeException("IssueRecord is not available."));
+
+        if(issueRecord.isReturned()){
+            throw new RuntimeException("Book is already returned.");
+        }
+
+        Book book = issueRecord.getBook();
+        book.setQuantity(book.getQuantity()+1);
+        book.setAvailable(true);
+        bookRepository.save(book);
+
+        issueRecord.setReturnedDate(LocalDate.now());
+        issueRecord.setReturned(true);
+
+        return issueRecordsRepository.save(issueRecord);
 
     }
 

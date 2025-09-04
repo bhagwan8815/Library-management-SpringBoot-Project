@@ -14,7 +14,7 @@ public class IssueRecord {
     private Long id;
     private LocalDate issueDate;
     private  LocalDate dueDate;
-    private LocalDate returnDate;
+    private LocalDate returnedDate;
     private boolean isReturned;
 
     @ManyToOne
@@ -25,5 +25,6 @@ public class IssueRecord {
     @ManyToOne
     @JoinColumn(name="book_id")
     private Book book;
+
 
 }
