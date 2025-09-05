@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1b01fdce-4673-4a05-8bc2-b16018309b4b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/DTO/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/DTO/BookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/DTO/LoginRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/DTO/LoginRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/DTO/LoginResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/DTO/LoginResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/entity/IssueRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/entity/IssueRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/services/BookServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/services/BookServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/services/IssueRecordsServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/services/IssueRecordsServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/services/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/services/AuthenticationServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-management/src/main/java/com/rana/library_management/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
