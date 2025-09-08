@@ -3,6 +3,7 @@ package com.rana.library_management.services;
 import com.rana.library_management.DTO.LoginRequestDTO;
 import com.rana.library_management.DTO.LoginResponseDTO;
 import com.rana.library_management.DTO.RegisterRequestDTO;
+import com.rana.library_management.JWT.JwtService;
 import com.rana.library_management.entity.User;
 import com.rana.library_management.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class AuthenticationServices {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private JWTService jwtService;
+    private JwtService jwtService;
 
     public User registerNormalUser(RegisterRequestDTO registerRequestDTO){
 
@@ -76,25 +77,14 @@ public class AuthenticationServices {
 
         User user = userRepository.findByUserName(loginRequestDTO.getUsername()).orElseThrow(()-> new RuntimeException("User not found"));
 
-        String token = jwtService.generateToken(user){
+        String token = jwtService.generateToken(user);
 
-            return LoginResponseDTO.builder()
+      return LoginResponseDTO.builder()
                     .token(token)
-                    .username(user.getUserName())
+                    .username(user.getUsername())
                     .roles(user.getRoles())
                     .build();
-        }
+
     }
-
-
-
-
-
-
-
-
-
-
-
 
 }
