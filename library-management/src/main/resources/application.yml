@@ -1,3 +1,7 @@
-spring.application.name=library-management
 jwt.secretkey=ranabhagwanpatidar
 jwt.expiration=864000
+  
+  librarymanagementspring
+
+spring:
+  datasource:
